@@ -14,7 +14,8 @@
             font-family: 'Arial', sans-serif;
         }
         body {
-            background: linear-gradient(120deg, #4c6ef5, #6a82fb);
+            background: url('{{ url_for('static', filename='background.jpeg') }}') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             min-height: 100vh;
             display: flex;
