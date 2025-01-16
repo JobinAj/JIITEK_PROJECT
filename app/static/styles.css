@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #4c6ef5, #6a82fb);
+    background: url('/static/background.jpg')
     color: #fff;
     min-height: 100vh;
     display: flex;
