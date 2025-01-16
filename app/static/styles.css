@@ -29,6 +29,7 @@ header h1 {
     letter-spacing: 2px;
     color: red;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeInMoveUp 2s ease-out forwards; /* Add animation */
 }
 
 header p {
@@ -36,6 +37,7 @@ header p {
     margin-top: 10px;
     color: #f5f6fa;
     opacity: 0.9;
+    animation: fadeInUp 2s ease-out forwards 0.5s; /* Delayed fade-in for paragraph */
 }
 
 /* Navigation Styles */
@@ -56,6 +58,8 @@ nav a {
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards 1s; /* Animation for links */
 }
 
 nav a:hover {
@@ -88,6 +92,8 @@ main .cta a {
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, background 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards 1.5s; /* Animation for CTA button */
 }
 
 main .cta a:hover {
@@ -141,5 +147,28 @@ footer .social-icons a:hover {
     main .cta a {
         font-size: 1rem;
         padding: 10px 20px;
+    }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInMoveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
