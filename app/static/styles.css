@@ -27,7 +27,7 @@ header h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ffdd59;
+    color: red;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
