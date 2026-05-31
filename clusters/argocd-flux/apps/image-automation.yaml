@@ -18,7 +18,7 @@ spec:
   imageRepositoryRef:
     name: jiitek-app
   filterTags:
-    pattern: '^main-(?P<ts>[0-9]+)-[a-f0-9]+$'
+    pattern: '^(?P<ts>[0-9]+)-[a-f0-9]+$'
     extract: '$ts'
   policy:
     numerical:
