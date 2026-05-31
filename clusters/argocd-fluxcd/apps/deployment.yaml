@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jiitek-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jiitek-app
+  template:
+    metadata:
+      labels:
+        app: jiitek-app
+    spec:
+      containers:
+        - name: jiitek-app
+          image: jobinaj/jiitek-project:1780245271-4a7e0a6 # {"$imagepolicy": "flux-system:jiitek-app"}
+          ports:
+            - containerPort: 5000
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jiitek-app
+  namespace: default
+spec:
+  selector:
+    app: jiitek-app
+  ports:
+    - port: 80
+      targetPort: 5000
+  type: LoadBalancer
